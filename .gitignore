@@ -1,0 +1,5 @@
+bazel*
+external/*
+glfw-master.zip
+glfw-master/*
+1.2.141.2/*
