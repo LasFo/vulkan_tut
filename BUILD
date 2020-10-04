@@ -11,7 +11,8 @@ platform(
 
 cc_binary(name = "main",
           srcs = ["main.cpp"],
-          deps = ["//1.2.141.2/Include:vulkan", "@glfw//:glfw",],
+          deps = ["@bazel_tools//tools/cpp/runfiles", "//1.2.141.2/Include:vulkan", "@glfw//:glfw",],
+          data = ["shaders/frag.spv", "shaders/vert.spv"],
           copts = ["-Xclang -std=c++17"],
           features = [ "fully_static_link" ],
           )
